@@ -1,0 +1,41 @@
+{
+    "props": "d-flex a-items",
+    "menu": [
+        {
+            "title": "Item 1",
+            "id": "item-1"
+        },
+        {
+            "title": "Item 2",
+            "id": "item-2",
+            "sub_category": [
+                {
+                    "sub_item": "Sub 2 item 1",
+                    "href": "#sub-2-item1",
+                    "id": "sub-2-1"
+                },
+                {
+                    "sub_item": "Sub 2 item 2",
+                    "href": "#sub-2-item2",
+                    "id": "sub-2-2"
+                }
+            ]
+        },
+        {
+            "title": "Item 3",
+            "id": "item-3",
+            "sub_category": [
+                {
+                    "sub_item": "Sub 3 item 1",
+                    "href": "#sub-3-item1",
+                    "id": "sub-3-1"
+                },
+                {
+                    "sub_item": "Sub 3 item 2",
+                    "href": "#sub-3-item2",
+                    "id": "sub-3-2"
+                }
+            ]
+        }
+    ]
+}
