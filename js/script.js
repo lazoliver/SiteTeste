@@ -1,3 +1,34 @@
+// MAIN
+const main = async() => {
+    
+    const body = document.getElementById('body');
+    const div = document.createElement('div');
+
+    const github = 'https://api.github.com/users/lazoliver/repos';
+
+    await fetch(github)
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+
+            body.appendChild(div);
+
+            data.map((obj) => {
+                if(`${obj.name}` === 'back-end_node') {
+                    const h2 = document.createElement('h2');
+                    div.appendChild(h2).innerText = `${obj.name}`;
+                    const a = document.createElement('a');
+                    a.innerText = 'Visit';
+                    div.appendChild(a).setAttribute('href', `${obj.url}`);
+                }
+            })
+        })
+        .catch((err) => {
+            console.log(`Ocorreu um erro no Main: ${err}`);
+        })
+}
+
 const menuHeader = async(header) => {
     
     const nav = document.createElement('nav');
@@ -68,7 +99,14 @@ const header = async() => {
             console.log(`Ocorreu um erro no Header: ${err}`);
         })
     menuHeader(header);
+        
+}
+
+const construir = () => {
+    
+    header()
+    main()
 
 }
 
-header()
+construir()
